@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sounds Fun Audio Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --bg: #F9F3EB;
+      --blue: #1E4B6C;
+      --blue-light: #88AABF;
+      --light: #FFFFFF;
+      --shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--blue);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 15px 8%;
+      background: rgba(249,243,235,0.95);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    nav strong {
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+    nav a {
+      margin: 0 12px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--blue-light);
+    }
+
+    header {
+      height: 90vh;
+      background: url('Sounds Fun Wallpaper V2.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 { font-size: 3rem; margin: 0; max-width: 700px; }
+    header p { font-size: 1.25rem; margin: 20px 0; }
+    .btn {
+      padding: 14px 36px;
+      background: var(--blue);
+      color: var(--light);
+      border-radius: 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #16384f;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 80px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.25rem;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--blue);
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+    }
+    .stat {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      flex: 1 1 280px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .portfolio-grid, .testimonials {
+      display: grid;
+      gap: 20px;
+    }
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .portfolio-item {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .portfolio-item p {
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    iframe {
+      width: 100%;
+      min-height: 150px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .testimonial {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      font-style: italic;
+    }
+
+    /* Contact section styling */
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 8px 25px rgba(30,75,108,0.08);
+      padding: 48px 28px 32px 28px;
+      max-width: 600px;
+      margin: 0 auto 80px auto;
+      text-align: center;
+    }
+    .contact-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(30,75,108,0.12);
+      background: #F9F3EB;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 24px;
+      width: 100%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 14px;
+      border: 1px solid var(--blue-light);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      padding: 14px;
+      border: none;
+      background: var(--blue);
+      color: var(--light);
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #16384f;
+    }
+    .credentials {
+      margin-top: 24px;
+    }
+    .credentials h3 {
+      font-weight: 500;
+      margin-bottom: 12px;
+      font-size: 1.13rem;
+      letter-spacing: 1px;
+    }
+    .credential-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .credential-links a {
+      border-radius: 50%;
+      padding: 10px;
+      font-size: 1.7rem;
+      transition: background 0.2s, color 0.2s, transform 0.18s;
+      color: var(--blue-light);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+    }
+    .credential-links a:hover {
+      color: #fff !important;
+      background: #1E4B6C;
+      transform: scale(1.12);
+    }
+    .fa-instagram { color: #E4405F !important; }
+    .fa-youtube-play { color: #FF0000 !important; }
+    .fa-soundcloud { color: #FF8800 !important; }
+    .fa-paypal { color: #003087 !important; }
+    .fa-fiverr {
+      background: #1DBF73 !important;
+      color: white !important;
+      font-size: 1rem !important;
+      font-style: normal !important;
+      border-radius: 20px;
+      padding: 4px 14px !important;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      line-height: 1;
+      width: auto;
+      height: auto;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .contact-section { padding: 30px; }
+      .contact-logo { width: 90px; height: 90px; margin-bottom: 14px;}
+      .contact-form { max-width: 300px; font-size: 1rem; }
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .btn { padding: 12px 28px; font-size: 0.95rem; }
+      .services, .stats { flex-direction: column; gap: 18px; }
+      section { padding: 60px 4%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>Sounds Fun Audio Co.</strong></div>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Authentic Mixing & Mastering with Personality</h1>
+      <p>Engineered to sound right. Crafted to sound fun.</p>
+      <a href="#contact" class="btn">Book a Session</a>
+    </div>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="stats">
+      <div class="stat">50+ Projects Completed</div>
+      <div class="stat">20+ Happy Clients</div>
+    </div>
+    <div class="services">
+      <div class="service-card"><h3>Mixing</h3><p>Crisp, genre-spanning mixes that highlight your unique voice.</p></div>
+      <div class="service-card"><h3>Mastering</h3><p>Professional loudness, polish, and radio-ready final shine.</p></div>
+      <div class="service-card"><h3>Sound Design</h3><p>Custom textures and sonic identities for music & media.</p></div>
+    </div>
+  </section>
+  <section class="instrumental-section" id="instrumental">
+    <h2>Instrumental Session Recording</h2>
+    <div class="service-card"><h3>Indian Classical Flute</h3><p>Sarang</p></div>
+      <div class="service-card"><h3>Guitars</h3><p>Ritwik.</p></div>
+      <div class="service-card"><h3>Violin</h3><p>Balamurali</p></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Featured Work</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <p>Master – “Daavanal - Antara Ansuna”</p>
+        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/album/daavaanal-feat-rohan-prasanna-mrunmay-chhavan/1767821278?i=1767821282"></iframe>
+      </div>
+      <div class="portfolio-item">
+        <p>Demo Mix – “Hurricane - Katie Laurel”</p>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1967292587&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/bansuri_vaadak" title="Sarang Gupta" target="_blank" style="color: #cccccc; text-decoration: none;">Sarang Gupta</a> · <a href="https://soundcloud.com/bansuri_vaadak/20240726-0010-sarang-hurricane" title="20240726 - 0010 - Sarang[Hurricane - Katey Laurel] Master-1" target="_blank" style="color: #cccccc; text-decoration: none;">20240726 - 0010 - Sarang[Hurricane - Katey Laurel] Master-1</a></div>
+      </div>
+      <div class="portfolio-item">
+        <p>Soul Rap – “Seeds of Your Sorrow - Spitting Ibex”</p>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1909235024&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/bansuri_vaadak" title="Sarang Gupta" target="_blank" style="color: #cccccc; text-decoration: none;">Sarang Gupta</a> · <a href="https://soundcloud.com/bansuri_vaadak/the-seeds-of-your-sorrow-spitting-ibex-mix-master" title="[The Seeds Of Your Sorrow - Spitting Ibex] Mix + Master" target="_blank" style="color: #cccccc; text-decoration: none;">[The Seeds Of Your Sorrow - Spitting Ibex] Mix + Master</a></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        “I had the pleasure of working with Sarang, and I couldn’t be happier with the results. His skill on the Indian flute is outstanding, and he executed the project flawlessly. The recordings were delivered on time, perfectly edited, and beautifully captured every nuance of the performance. Highly professional, talented, and a joy to collaborate with. I would definitely work with him again and highly recommend him to anyone looking for exceptional flute recordings.”<br>
+        <strong>– Emmanuel - Windhaven Bay Studios</strong>
+      </div>
+      <div class="testimonial">
+        “Polished, clear, and full of life. A joy to work with.”<br>
+        <strong>– Music Producer</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <img src="SoundsFun-Logo-V2.jpg" alt="Sounds Fun Audio Co. Logo" class="contact-logo">
+      <h2>Get in Touch</h2>
+      <form class="contact-form" action="mailto:soundsfunaudiocompany@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p>Or email: <a href="mailto:soundsfunaudiocompany@gmail.com">soundsfunaudiocompany@gmail.com</a></p>
+      <div class="credentials">
+        <h3>Connect with Sarang</h3>
+        <div class="credential-links">
+          <a href="https://www.instagram.com/bansuri_vaadak/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UC8XmH1Ilf188olUPKVcf_ow" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+          <a href="https://www.fiverr.com/sarangmusic" target="_blank" title="Fiverr"><span class="fa-fiverr">Fiverr</span></a>
+          <a href="https://on.soundcloud.com/2oX0V8Glx61NErLz8W" target="_blank" title="SoundCloud"><i class="fa fa-soundcloud"></i></a>
+          <a href="https://paypal.me/sarangaudio" target="_blank" title="PayPal"><i class="fa fa-paypal"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sounds Fun Audio Co.</p>
+    <p>
+      <a href="#services">Services</a> •
+      <a href="#portfolio">Portfolio</a> •
+      <a href="#testimonials">Testimonials</a> •
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>
