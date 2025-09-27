@@ -252,17 +252,14 @@
     }
     .portfolio-item p { margin: 0 0 12px; font-weight: 500; }
     
-    /* Base iframe style */
     iframe {
         width: 100%;
         border: none;
         border-radius: 8px;
     }
-    /* Specific size for smaller audio players in portfolio */
     #portfolio .portfolio-item iframe {
         height: 166px;
     }
-    /* Specific size for larger videos in flute sessions */
     #instrumental .carousel-slide iframe {
         aspect-ratio: 16 / 9;
     }
@@ -436,11 +433,12 @@
                         </div>
                         <div class="carousel-slide testimonial-card">
                             <p class="testimonial-quote">Polished, clear, and full of life. A joy to work with.</p>
-                            <span class="testimonial-author">– Music Producer</span>
+                            <span class="testimonial-author">– Farukh - Fiverr</span>
                         </div>
                         <div class="carousel-slide testimonial-card">
-                            <p class="testimonial-quote">Sarang's mastering work elevated my tracks to a whole new level. The quality is exceptional and the communication was great throughout the process.</p>
-                            <span class="testimonial-author">– A. Sharma, Musician</span>
+                            <p class="testimonial-quote">It was so fun collaborating with Saarang for the master of my original single Daavaanal, he was so calm and patient with me and he made sure he understood what I wanted and he didn’t just deliver how I wanted it, but added his own touch to the sound of Daavaanal and enhanced the song’s aura so beautifully! 
+I’m glad it was he who mastered the song!.</p>
+                            <span class="testimonial-author">– Antara, Indie Artist</span>
                         </div>
                     </div>
                 </div>
@@ -452,12 +450,17 @@
 
     <section id="contact">
         <h2>Get in Touch</h2>
-        <form class="contact-form" action="https://formspree.io/f/mrbyepnz" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-          <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-          <button type="submit">Send Message</button>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="7abd2bb2-6168-4b2f-af6c-ea005fd61761">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            
+            <input type="checkbox" name="honeypot" style="display: none;">
+            <input type="hidden" name="redirect" value="https://soundsfun.co.in/thank-you.html">
+
+            <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            <button type="submit">Send Message</button>
         </form>
         <p>Or email directly at: <a href="mailto:soundsfunaudiocompany@gmail.com" style="color: var(--blue); font-weight: 500;">soundsfunaudiocompany@gmail.com</a></p>
         <div class="credentials">
