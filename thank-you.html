@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Sounds Fun Audio Co.</title>
+  <link rel="icon" href="Images/SoundsFun Logo V2-2.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FBF9F7;
+      --blue: #1E4B6C;
+      --blue-light: #88AABF;
+      --light: #FFFFFF;
+      --shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--blue);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* --- NAVIGATION --- */
+    nav {
+      position: sticky;
+      top: 0;
+      padding: 10px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background-color: rgba(251, 249, 247, 0.98);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+    }
+    .nav-logo img { height: 40px; }
+    .nav-links { flex-grow: 1; text-align: center; }
+    .nav-links a {
+      margin: 0 15px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--blue-light); }
+    .nav-cta a {
+      padding: 8px 20px;
+      background: var(--blue);
+      color: var(--light);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      border: 2px solid var(--blue);
+    }
+    .nav-cta a:hover {
+        background: var(--blue-light);
+        border-color: var(--blue-light);
+    }
+
+    /* --- MAIN CONTENT --- */
+    main {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 8%;
+    }
+    .confirmation-box {
+        max-width: 550px;
+        background: var(--light);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+    }
+    .confirmation-box img {
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    h1 { font-size: 2.5rem; margin-top: 0; }
+    p { font-size: 1.1rem; }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: var(--blue);
+      color: var(--light);
+      border-radius: 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #16384f;
+      transform: translateY(-2px);
+    }
+
+    /* --- FOOTER --- */
+    footer { 
+        text-align: center; 
+        padding: 40px 30px; 
+        background: var(--blue);
+        color: var(--light);
+    }
+    footer p { margin: 5px 0; font-size: 0.9rem; color: var(--light);}
+    footer a { color: var(--light); text-decoration: none; font-weight: 500; }
+    .section-full-width { max-width: none; }
+
+    /* --- MOBILE --- */
+    .mobile-nav-toggle { display: none; }
+    @media (max-width: 900px) {
+        .nav-links, .nav-cta { display: none; } 
+        .mobile-nav-toggle { 
+            display: block; font-size: 1.8rem; cursor: pointer; 
+            background: none; border: none; color: var(--blue);
+        }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="Images/SoundsFun Logo V2-2.png" alt="Sounds Fun Audio Co. Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About Us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#testimonials">Testimonials</a>
+    </div>
+    <div class="nav-cta">
+        <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
+  </nav>
+
+  <main>
+    <div class="confirmation-box">
+      <img src="Images/SoundsFun Logo V2-2.png" alt="Sounds Fun Audio Co. Logo">
+      <h1>Message Sent!</h1>
+      <p>Thank you so much for reaching out. I really appreciate it, and I’ll review your message and get back to you soon.</p>
+      <a href="index.html" class="btn">Return to Homepage</a>
+    </div>
+  </main>
+  
+  <footer class="section-dark section-full-width">
+    <p>© 2025 Sounds Fun Audio Co. | Mumbai, India</p>
+  </footer>
+
+</body>
+</html>

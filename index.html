@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sounds Fun Audio Co. | Professional Mixing, Mastering & Sound Design</title>
+  <meta name="description" content="Professional audio services in Mumbai. We offer mixing, mastering, and sound design to bring your music and film projects to life. Engineered to sound right, crafted to sound fun.">
+  <meta name="keywords" content="audio mixing, mastering services, sound design, post-production, Mumbai, Dolby Atmos, Sarang Gupta">
+  
+  <link rel="icon" href="Images/SoundsFun Logo V2-2.png" type="image/png">
+
+  <meta property="og:title" content="Sounds Fun Audio Co. | Professional Mixing & Mastering">
+  <meta property="og:description" content="Engineered to sound right. Crafted to sound fun.">
+  <meta property="og:image" content="https://soundsfun.co.in/Images/Freelance Profile.png">
+  <meta property="og:url" content="https://soundsfun.co.in">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --bg: #FBF9F7;
+      --blue: #1E4B6C;
+      --blue-light: #88AABF;
+      --light: #FFFFFF;
+      --shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--blue);
+      line-height: 1.6;
+    }
+
+    /* --- NAVIGATION --- */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 10px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transition: background-color 0.4s ease, padding 0.4s ease;
+      box-sizing: border-box;
+    }
+    nav.nav-scrolled {
+      background-color: rgba(251, 249, 247, 0.98);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 5px 4%;
+    }
+    .nav-logo img {
+      height: 50px;
+      transition: height 0.4s ease;
+    }
+    nav.nav-scrolled .nav-logo img { height: 40px; }
+    .nav-links {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .nav-links a {
+      margin: 0 15px;
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+    nav.nav-scrolled .nav-links a { color: var(--blue); }
+    nav.nav-scrolled .nav-links a:hover { color: var(--blue-light); }
+    .nav-links a:hover { color: var(--blue-light); }
+
+    .nav-cta a {
+      padding: 8px 20px;
+      background: var(--light);
+      color: var(--blue);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+      font-size: 0.9rem;
+      border: 2px solid var(--light);
+    }
+    .nav-cta a:hover {
+      background: transparent;
+      color: var(--light);
+    }
+    nav.nav-scrolled .nav-cta a {
+      background: var(--blue);
+      color: var(--light);
+      border-color: var(--blue);
+    }
+    nav.nav-scrolled .nav-cta a:hover {
+        background: var(--blue-light);
+        border-color: var(--blue-light);
+    }
+
+    /* --- HEADER --- */
+    header {
+      height: 100vh;
+      background: url('Images/Freelance Profile.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      color: var(--light);
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(30, 75, 108, 0.5);
+    }
+    header > div { position: relative; }
+    header h1 { font-size: 3.5rem; margin: 0; max-width: 800px; }
+    header p { font-size: 1.25rem; margin: 20px 0 30px; }
+    .btn {
+      padding: 14px 36px;
+      background: var(--light);
+      color: var(--blue);
+      border-radius: 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #e9e9e9;
+      transform: translateY(-2px);
+    }
+
+    /* --- SECTION STYLING --- */
+    section {
+      padding: 100px 8%;
+      max-width: 1200px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    .section-dark {
+      background: var(--blue);
+      color: var(--light);
+    }
+    .section-dark h2 { color: var(--light); }
+    .section-dark h2::after { background: var(--light); }
+    .section-full-width {
+      max-width: none;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.25rem;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--blue);
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    /* --- GENERIC CAROUSEL STYLING --- */
+    .carousel { 
+        position: relative; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 0 50px;
+    }
+    .carousel-container { overflow: hidden; border-radius: 12px;}
+    .carousel-track { 
+        display: flex; 
+        transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+    }
+    .carousel-button {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      color: white; border: none; padding: 10px; cursor: pointer; z-index: 1;
+      border-radius: 50%; width: 40px; height: 40px; font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    .carousel-button:hover { background: rgba(255, 255, 255, 0.4); }
+    .carousel-button.prev { left: 0; }
+    .carousel-button.next { right: 0; }
+    
+    .carousel.carousel-light .carousel-button {
+        background: rgba(30, 75, 108, 0.7);
+    }
+    .carousel.carousel-light .carousel-button:hover {
+        background: var(--blue);
+    }
+
+    /* --- Carousel Dots --- */
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .carousel-dot {
+      border: none;
+      background: #ccc;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      padding: 0;
+      transition: background-color 0.3s;
+    }
+    .carousel-dot.active { background: var(--blue-light); }
+    .section-dark .carousel-dot { background: rgba(255,255,255,0.3); }
+    .section-dark .carousel-dot.active { background: var(--light); }
+
+    /* --- SERVICES SECTION --- */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-8px); }
+    .service-card h3 { margin-top: 0; margin-bottom: 10px; font-size: 1.3rem; }
+
+    /* --- PORTFOLIO & IFRAME STYLES --- */
+    .portfolio-carousel .carousel-track { gap: 20px; }
+    .portfolio-item {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      color: var(--blue);
+    }
+    .portfolio-item p { margin: 0 0 12px; font-weight: 500; }
+    
+    /* Base iframe style */
+    iframe {
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+    }
+    /* Specific size for smaller audio players in portfolio */
+    #portfolio .portfolio-item iframe {
+        height: 166px;
+    }
+    /* Specific size for larger videos in flute sessions */
+    #instrumental .carousel-slide iframe {
+        aspect-ratio: 16 / 9;
+    }
+
+    /* --- TESTIMONIALS --- */
+    .testimonial-card {
+        padding: 30px;
+        border-radius: 12px;
+        background: var(--bg);
+        color: var(--blue);
+    }
+    .testimonial-carousel .carousel-track { gap: 20px; }
+    .testimonial-quote { font-style: italic; margin-bottom: 15px; font-size: 1.1rem; position: relative; padding-left: 20px; }
+    .testimonial-quote::before { content: '“'; position: absolute; top: 0; left: 0; font-size: 2rem; line-height: 1; color: var(--blue-light); }
+    .testimonial-author { font-weight: 700; text-align: right; display: block; }
+    
+    /* --- CONTACT --- */
+    #contact { text-align: center; }
+    .contact-form {
+      display: flex; flex-direction: column; gap: 15px;
+      max-width: 600px; margin: 0 auto 40px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 14px; border: 1px solid var(--blue-light);
+      border-radius: 8px; font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    .contact-form button {
+      padding: 14px; border: none; background: var(--blue);
+      color: var(--light); border-radius: 8px; font-size: 1rem;
+      cursor: pointer; font-weight: 500; transition: background 0.3s;
+    }
+    .contact-form button:hover { background: #16384f; }
+    .credentials { margin-top: 40px; }
+    .credentials h3 { font-weight: 500; font-size: 1.2rem; margin-bottom: 20px; }
+    .credential-links { display: flex; justify-content: center; gap: 20px; }
+    .credential-links a {
+      font-size: 1.8rem; color: var(--blue-light);
+      text-decoration: none; transition: color 0.3s, transform 0.3s;
+    }
+    .credential-links a:hover { color: var(--blue); transform: translateY(-3px); }
+
+    /* --- FOOTER --- */
+    footer { text-align: center; padding: 40px 30px; }
+    footer .footer-logo img { height: 60px; margin-bottom: 20px; }
+    footer p { margin: 5px 0; font-size: 0.9rem; }
+    footer a { color: var(--light); text-decoration: none; font-weight: 500; }
+    
+    /* --- MOBILE NAVIGATION --- */
+    .mobile-nav-toggle { display: none; }
+    @media (max-width: 900px) {
+        .nav-links, .nav-cta { display: none; }
+        .nav-links.nav-active {
+            position: fixed; top: 0; right: 0; height: 100vh;
+            width: 70%; background: var(--bg); flex-direction: column;
+            align-items: center; justify-content: center;
+            transform: translateX(0%); transition: transform 0.4s ease-in-out;
+            display: flex;
+        }
+        .nav-links a { color: var(--blue); margin: 20px 0; font-size: 1.2rem; }
+        .mobile-nav-toggle { 
+            display: block; font-size: 1.8rem; cursor: pointer; 
+            background: none; border: none; color: var(--light);
+        }
+        nav.nav-scrolled .mobile-nav-toggle { color: var(--blue); }
+        header h1 { font-size: 2.5rem; }
+        header p { font-size: 1.1rem; }
+        section { padding: 80px 4%; }
+        .carousel { padding: 0 40px; }
+        .carousel-button.prev { left: -5px; }
+        .carousel-button.next { right: -5px; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-logo">
+      <a href="#"><img src="Images/SoundsFun Logo V2-2.png" alt="SoundsFun Audio Co. Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Testimonials</a>
+    </div>
+    <div class="nav-cta">
+        <a href="#contact">Contact</a>
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Open navigation menu">
+        <i class="fa fa-bars"></i>
+    </button>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Authentic Mixing & Mastering with Personality</h1>
+      <p>Engineered to sound right. Crafted to sound fun.</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service-card"><h3>Mixing</h3><p>Crisp, genre-spanning mixes that highlight your unique voice.</p></div>
+        <div class="service-card"><h3>Mastering</h3><p>Professional loudness, polish, and radio-ready final shine.</p></div>
+        <div class="service-card"><h3>Sound Design</h3><p>Custom textures and sonic identities for music & media.</p></div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section-dark section-full-width">
+        <div class="content-wrapper" style="max-width: 1200px; margin: auto; padding: 100px 8%;">
+            <h2>Featured Work</h2>
+            <div class="carousel portfolio-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide portfolio-item">
+                            <p>Master – “Daavanal - Antara Ansuna”</p>
+                            <iframe allow="autoplay *; encrypted-media *;" frameborder="0" src="https://embed.music.apple.com/in/album/daavaanal-feat-rohan-prasanna-mrunmay-chhavan/1767821278?i=1767821282"></iframe>
+                        </div>
+                        <div class="carousel-slide portfolio-item">
+                            <p>Demo Mix – “Hurricane - Katie Laurel”</p>
+                            <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1967292587&color=%231e4b6c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                        </div>
+                        <div class="carousel-slide portfolio-item">
+                            <p>Soul Rap – “Seeds of Your Sorrow”</p>
+                            <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1909235024&color=%231e4b6c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                        </div>
+                        <div class="carousel-slide portfolio-item">
+                            <p>Yeshu Naam Mein - Stephen Phale Mix & Master</p>
+                            <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2106913314&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        </div>
+                        <div class="carousel-slide portfolio-item">
+                            <p>Make You Dance - Cyrille Aimée Demo Mix + Master</p>
+                            <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1911296819&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="instrumental">
+        <h2>Flute Sessions Played</h2>
+        <div class="carousel carousel-light flute-sessions-carousel">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><iframe src="https://www.youtube.com/embed/gOu4I86LoO8?si=xh5pdm00Xt-BiWc9&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="carousel-slide"><iframe src="https://www.youtube.com/embed/nKlTjngwzQw?si=bwPuVvM84OTkCc1O&amp;start=237" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="carousel-slide"><iframe src="https://www.youtube.com/embed/LfS18wmAhaY?si=jj1MUHPp2uVrvsPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="carousel-slide"><iframe src="https://www.youtube.com/embed/lcnwBcRma5Q?si=InwdjOsMhBE_SZqn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                </div>
+            </div>
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-dark section-full-width">
+        <div class="content-wrapper" style="max-width: 1200px; margin: auto; padding: 100px 8%;">
+            <h2>What Clients Say</h2>
+            <div class="carousel testimonial-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide testimonial-card">
+                            <p class="testimonial-quote">I had the pleasure of working with Sarang, and I couldn’t be happier with the results... Highly professional, talented, and a joy to collaborate with. I would definitely work with him again and highly recommend him.</p>
+                            <span class="testimonial-author">– Emmanuel - Windhaven Bay Studios</span>
+                        </div>
+                        <div class="carousel-slide testimonial-card">
+                            <p class="testimonial-quote">Polished, clear, and full of life. A joy to work with.</p>
+                            <span class="testimonial-author">– Music Producer</span>
+                        </div>
+                        <div class="carousel-slide testimonial-card">
+                            <p class="testimonial-quote">Sarang's mastering work elevated my tracks to a whole new level. The quality is exceptional and the communication was great throughout the process.</p>
+                            <span class="testimonial-author">– A. Sharma, Musician</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+      </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" action="https://formspree.io/f/mrbyepnz" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p>Or email directly at: <a href="mailto:soundsfunaudiocompany@gmail.com" style="color: var(--blue); font-weight: 500;">soundsfunaudiocompany@gmail.com</a></p>
+        <div class="credentials">
+          <h3>Connect with Sarang</h3>
+          <div class="credential-links">
+            <a href="https://www.instagram.com/bansuri_vaadak/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UC8XmH1Ilf188olUPKVcf_ow" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://on.soundcloud.com/2oX0V8Glx61NErLz8W" target="_blank" title="SoundCloud"><i class="fa fa-soundcloud"></i></a>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="section-dark section-full-width">
+    <div class="footer-logo">
+        <img src="Images/SoundsFun Logo V2-2.png" alt="SoundsFun Audio Co. Logo">
+    </div>
+    <p>© 2025 Sounds Fun Audio Co. | Mumbai, India</p>
+    <p>
+      <a href="about.html">About Us</a> •
+      <a href="#services">Services</a> •
+      <a href="#portfolio">Portfolio</a>
+    </p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- NAV SCROLL SCRIPT ---
+        const nav = document.getElementById('navbar');
+        if (nav) {
+            window.onscroll = function() {
+                if (window.scrollY > 50) {
+                    nav.classList.add("nav-scrolled");
+                } else {
+                    nav.classList.remove("nav-scrolled");
+                }
+            };
+        }
+
+        // --- MOBILE NAV SCRIPT ---
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileNavToggle && navLinks) {
+            mobileNavToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active');
+                const icon = mobileNavToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        // --- GENERIC CAROUSEL SCRIPT WITH DOTS ---
+        const carousels = document.querySelectorAll('.carousel');
+        carousels.forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            if (!track) return;
+            const slides = Array.from(track.children);
+            const nextButton = carousel.querySelector('.next');
+            const prevButton = carousel.querySelector('.prev');
+            const gap = parseInt(getComputedStyle(track).gap) || 0;
+            
+            let slideIndex = 0;
+
+            const dotsNav = document.createElement('div');
+            dotsNav.classList.add('carousel-nav');
+            carousel.appendChild(dotsNav);
+
+            slides.forEach((slide, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dotsNav.appendChild(dot);
+            });
+
+            const dots = Array.from(dotsNav.children);
+
+            const updateDots = (targetIndex) => {
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[targetIndex].classList.add('active');
+            };
+
+            dotsNav.addEventListener('click', e => {
+                const targetDot = e.target.closest('button.carousel-dot');
+                if (!targetDot) return;
+                
+                slideIndex = dots.findIndex(dot => dot === targetDot);
+                moveToSlide(track, slideIndex);
+                updateDots(slideIndex);
+            });
+
+            const moveToSlide = (currentTrack, targetIndex) => {
+                if (slides.length > 0) {
+                    const slideWidth = slides[0].getBoundingClientRect().width;
+                    const newTransform = targetIndex * (slideWidth + gap);
+                    currentTrack.style.transform = `translateX(-${newTransform}px)`;
+                }
+            };
+
+            nextButton.addEventListener('click', () => {
+              slideIndex++;
+              if (slideIndex >= slides.length) { slideIndex = 0; }
+              moveToSlide(track, slideIndex);
+              updateDots(slideIndex);
+            });
+
+            prevButton.addEventListener('click', () => {
+              slideIndex--;
+              if (slideIndex < 0) { slideIndex = slides.length - 1; }
+              moveToSlide(track, slideIndex);
+              updateDots(slideIndex);
+            });
+            
+            window.addEventListener('resize', () => {
+                moveToSlide(track, slideIndex);
+            });
+        });
+    });
+  </script>
+</body>
+</html>

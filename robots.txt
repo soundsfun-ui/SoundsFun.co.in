@@ -1,0 +1,6 @@
+# Allow all web crawlers to access the entire site.
+User-agent: *
+Allow: /
+
+# Point search engines to the sitemap for a complete list of pages.
+Sitemap: https://soundsfun.co.in/sitemap.xml
